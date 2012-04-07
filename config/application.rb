@@ -38,20 +38,13 @@ module MarathonRunners
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :pl
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
-
-    # Use SQL instead of Active Record's schema dumper when creating the database.
-    # This is necessary if your schema can't be completely dumped by the schema dumper,
-    # like if you have constraints or database-specific column types
-    # config.active_record.schema_format = :sql
+    config.filter_parameters += [:password, :password_confirmation]
 
     # Enforce whitelist mode for mass assignment.
     # This will create an empty whitelist of attributes available for mass-assignment for all models
@@ -64,5 +57,11 @@ module MarathonRunners
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # test generators settings
+    config.generators do |g|
+      g.test_framework :mini_test, :spec => true, :fixture => true
+      g.integration_tool :mini_test
+    end
   end
 end
