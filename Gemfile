@@ -26,6 +26,9 @@ gem 'dm-devise',            '~> 2.0.1'
 
 gem 'jquery-rails'
 
+gem 'omniauth'
+gem 'simple_form'
+
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
   gem 'coffee-rails', '~> 3.1.1'
@@ -34,7 +37,8 @@ end
 
 
 group :development, :test do
-  gem 'minitest', '~> 2.11'
+  gem 'minitest-rails'
+  gem 'minitest-matchers'
   gem 'turn', '~> 0.8.3', :require => false
   gem 'puma', '~> 1.0'
 end
