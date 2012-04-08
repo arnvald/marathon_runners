@@ -37,7 +37,7 @@ end
 
 
 group :development, :test do
-  gem 'minitest-rails'
+  gem 'minitest-rails', :git => 'https://github.com/blowmage/minitest-rails.git'
   gem 'minitest-matchers'
   gem 'turn', '~> 0.8.3', :require => false
   gem 'puma', '~> 1.0'

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/blowmage/minitest-rails.git
+  revision: 401c75d69411329ac1751c4b47d4202935827ae4
+  specs:
+    minitest-rails (0.0.6)
+      minitest (~> 2.11)
+      rails (~> 3.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -121,9 +129,6 @@ GEM
     minitest (2.12.0)
     minitest-matchers (1.2.0)
       minitest (>= 2.5.0)
-    minitest-rails (0.0.6)
-      minitest (~> 2.11)
-      rails (~> 3.1)
     multi_json (1.0.4)
     omniauth (1.0.3)
       hashie (~> 1.2)
@@ -211,7 +216,7 @@ DEPENDENCIES
   dm-validations (~> 1.2.0)
   jquery-rails
   minitest-matchers
-  minitest-rails
+  minitest-rails!
   omniauth
   puma (~> 1.0)
   railties (~> 3.1.1)
