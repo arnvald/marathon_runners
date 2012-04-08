@@ -26,6 +26,11 @@ class User
   # property :authentication_token, String, :length => 255
 
   property :id, Serial
+  property :admin, Boolean
+  has n, :activities
 
+  def admin?
+    !!admin
+  end
 
 end
