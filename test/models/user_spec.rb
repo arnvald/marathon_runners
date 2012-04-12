@@ -11,11 +11,13 @@ describe User do
       @user.password = "password"
       @user.password_confirmation = "password"
       @user.valid?.must_equal false
+      @user.errors[:email].wont_be_nil
     end
 
     it "should be invalid without password" do
       @user.email = "user@email.com"
       @user.valid?.must_equal false
+      @user.errors[:password].wont_be_nil
     end
 
     it "should be valid" do
